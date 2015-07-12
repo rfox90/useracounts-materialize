@@ -1,8 +1,8 @@
 Package.describe({
   summary: 'Accounts Templates styled for Materialize Css.',
   version: '1.11.1',
-  name: 'useraccounts:materialize',
-  git: 'https://github.com/meteor-useraccounts/materialize.git',
+  name: 'ahref:materialize',
+  git: 'https://github.com/rfox90/useraccounts-materialize',
 });
 
 Package.on_use(function(api, where) {
@@ -22,6 +22,7 @@ Package.on_use(function(api, where) {
   ], ['client', 'server']);
 
   api.add_files([
+  	'lib/main.js',
     'lib/at_error.html',
     'lib/at_error.js',
     'lib/at_form.html',
@@ -59,13 +60,14 @@ Package.on_use(function(api, where) {
     'lib/at_title.html',
     'lib/at_title.js',
     'lib/full_page_at_form.html',
-    'lib/at_materialize.css',
+    'lib/full_page_at_form.js',
+    'lib/at_materialize.css'
   ], ['client']);
 });
 
 Package.on_test(function(api) {
   api.use([
-    'useraccounts:materialize',
+    'ahref:materialize',
     'useraccounts:core@1.11.1',
   ]);
 

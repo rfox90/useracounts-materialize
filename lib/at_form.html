@@ -1,39 +1,52 @@
 <template name="atForm">
-  {{#unless hide}}
-    <div class="at-form">
-      {{#if showTitle}}
-        {{> atTitle}}
-      {{/if}}
-      {{#if showOauthServices}}
-        {{> atOauth}}
-      {{/if}}
-      {{#if showServicesSeparator}}
-        {{> atSep}}
-      {{/if}}
-      {{#if showError}}
-        {{> atError}}
-      {{/if}}
-      {{#if showResult}}
-        {{> atResult}}
-      {{/if}}
-      {{#if showMessage}}
-        {{> atMessage}}
-      {{/if}}
-      {{#if showPwdForm}}
-        {{> atPwdForm}}
-      {{/if}}
-      {{#if showTermsLink}}
-        {{> atTermsLink}}
-      {{/if}}
-      {{#if showSignInLink}}
-        {{> atSigninLink}}
-      {{/if}}
-      {{#if showSignUpLink}}
-        {{> atSignupLink}}
-      {{/if}}
-      {{#if showResendVerificationEmailLink}}
-        {{> atResendVerificationEmailLink}}
-      {{/if}}
-    </div>
-  {{/unless}}
+	{{#unless hide}}
+	<div class="row at-form">
+		<div class="col s12 z-depth-4 card-panel">
+			<form class="login-form">
+				{{#if showTitle}}
+					{{> atTitle}}
+				{{/if}}
+				{{#if showOauthServices}}
+					{{> atOauth}}
+				{{/if}}
+				{{#if showServicesSeparator}}
+					{{> atSep}}
+				{{/if}}
+				{{#if showError}}
+					{{> atError}}
+				{{/if}}
+				{{#if showResult}}
+					{{> atResult}}
+				{{/if}}
+				{{#if showMessage}}
+					{{> atMessage}}
+				{{/if}}
+				{{#if showPwdForm}}
+						{{> atPwdForm}}
+				{{/if}}
+				{{#if showSignInLink}}
+					{{> atSigninLink}}
+				{{/if}}
+				<div class="row">
+					{{#if showSignUpLink}}
+						{{> atSignupLink}}
+					{{/if}}
+					{{#if showForgotPasswordLink}}
+						{{> atPwdLink}}
+					{{/if}}
+				</div>
+				<div class="row">
+				{{#if showTermsLink}}
+					{{> atTermsLink}}
+				{{/if}}
+				</div>
+				<div class="row">
+				{{#if showResendVerificationEmailLink}}
+					{{> atResendVerificationEmailLink}}
+				{{/if}}
+				</div>
+			</form>
+		</div>
+	</div>
+	{{/unless}}
 </template>
