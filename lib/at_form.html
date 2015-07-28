@@ -2,7 +2,7 @@
 	{{#unless hide}}
 	<div class="row at-form">
 		<div class="col s12 z-depth-4 card-panel">
-			<form class="login-form">
+			<div class="login-form">
 				{{#if showTitle}}
 					{{> atTitle}}
 				{{/if}}
@@ -31,21 +31,14 @@
 					{{#if showSignUpLink}}
 						{{> atSignupLink}}
 					{{/if}}
-					{{#if showForgotPasswordLink}}
-						{{> atPwdLink}}
+					{{#if showTermsLink}}
+						{{> atTermsLink}}
 					{{/if}}
 				</div>
-				<div class="row">
-				{{#if showTermsLink}}
-					{{> atTermsLink}}
-				{{/if}}
-				</div>
-				<div class="row">
 				{{#if showResendVerificationEmailLink}}
 					{{> atResendVerificationEmailLink}}
 				{{/if}}
-				</div>
-			</form>
+			</div>
 		</div>
 	</div>
 	{{/unless}}
