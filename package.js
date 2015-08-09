@@ -18,7 +18,7 @@ Package.on_use(function(api, where) {
   ], ['client', 'server']);
 
   api.imply([
-    'useraccounts:core@1.11.1',
+    'useraccounts:core@1.12.0',
   ], ['client', 'server']);
 
   api.add_files([
